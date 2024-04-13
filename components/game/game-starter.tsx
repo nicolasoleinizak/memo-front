@@ -11,15 +11,9 @@ export const GameStarter = ({ session }: {session: Session}) => {
     useEffect(() => {
         if (session?.id) {
             localStorage.setItem('memoTestSessions', JSON.stringify([session]));
-        
-            console.log("Setted")
             router.push(`/games/play/${session.id}`);
         }
     }, [session, router]);
 
-    return (
-    <>
-        {JSON.stringify(session)}
-    </>
-);
+    return (<></>);
 };

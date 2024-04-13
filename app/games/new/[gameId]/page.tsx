@@ -38,8 +38,6 @@ export default async function NewSession({ params }: any) {
     numberOfPairs: game.images.length
   }
 
-  console.log('session', session);
-
   return (
     <GameStarter session={session} />
   )
