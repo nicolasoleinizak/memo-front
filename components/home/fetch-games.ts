@@ -3,7 +3,7 @@ import { fetchServerGraphQL } from "@/lib/network/fetch-server-graphql"
 export const fetchGames = async () => {
     return await fetchServerGraphQL(`
         query {
-            memoTest {
+            memoTests {
                 id
                 name
                 images {

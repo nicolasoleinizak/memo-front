@@ -12,10 +12,10 @@ interface GameCardProps {
 export default function GameCard({ title, imageUrl, played, onClick }: GameCardProps) {
   return (
     <div
-      className={`w-[240px] h-[240px] relative rounded-md outline outline-4 overflow-hidden hover:shadow-lg hover:cursor-pointer outline-primary-950`}
+      className={`w-[240px] h-[240px] relative rounded-md outline outline-4 overflow-hidden hover:shadow-lg hover:cursor-pointer outline-secondary-800`}
       onClick={onClick}
     >
-      <div className="absolute z-10 top-0 left-0 bg-slate-50 text-center w-full bg-primary-950">
+      <div className="absolute z-10 top-0 left-0 bg-slate-50 text-center w-full bg-secondary-800">
         <h3 className="text-primary-50">{title}</h3>
       </div>
       <Image
