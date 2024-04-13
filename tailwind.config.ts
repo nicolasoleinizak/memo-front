@@ -28,7 +28,7 @@ const config: Config = {
         '800': '#007a3d',
         '900': '#026535',
         '950': '#00391b',
-        default: '#007a3d'
+        DEFAULT: '#007a3d'
       },
       secondary: {
         '50': '#faffe4',
@@ -42,6 +42,7 @@ const config: Config = {
         '800': '#9c6c00',
         '900': '#7a5100',
         '950': '#4d2d00',
+        DEFAULT: '#9c6c00'
     },
     },
   },
