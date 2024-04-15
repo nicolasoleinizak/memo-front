@@ -29,7 +29,7 @@ export default function GameResultCard({ title, imageUrl, score }: GameResultCar
       />
       <div className="absolute w-full h-[150px] z-50 flex justify-center items-center">
         <div className="w-[70px] h-[70px] rounded-[35px] bg-primary-800 flex justify-center items-center text-primary-50 font-bold text-xl">
-            {score}%
+            {score.toFixed(0)}%
         </div>
       </div>
     </div>
