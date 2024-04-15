@@ -3,7 +3,7 @@ import { fn } from '@storybook/test';
 import { GameCard } from '@/components/game-card';
 
 const meta = {
-  title: 'Example/GameCard',
+  title: 'Game/GameCard',
   component: GameCard,
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
   tags: ['autodocs'],

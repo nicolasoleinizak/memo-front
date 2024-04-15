@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { GameResultCard } from '@/components/game-result-card';
 
 const meta = {
-  title: 'Example/GameResultCard',
+  title: 'Game/GameResultCard',
   component: GameResultCard,
   tags: ['autodocs'],
   parameters: {
