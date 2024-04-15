@@ -53,6 +53,12 @@ export default function Session() {
       const storageFinishedSessionsValue = localStorage.getItem('memoTestFinishedSessions') || '[]';
       const storageFinishedSessions = storageFinishedSessionsValue ? JSON.parse(storageFinishedSessionsValue) : [];
     
+      const storageContainsSession = storageFinishedSessions.find((session: any) => session.id === finishedSession.id);
+
+      if (storageContainsSession) {
+        return;
+      }
+
       const updatedFinishedSessions = [
         ...storageFinishedSessions,
         {

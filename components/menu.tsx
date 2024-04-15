@@ -49,7 +49,7 @@ export default function Menu({className}: {className?: string}) {
         </Link>
       </div>
       <animated.div style={animatedProps} className="absolute">
-        <Sidebar />
+        <Sidebar onClick={() => setDisplayMenu(false)}/>
       </animated.div>
     </div>
   );
