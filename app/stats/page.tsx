@@ -19,7 +19,6 @@ export default function Stats() {
     const storageFinishedSessionsValue = localStorage.getItem('memoTestFinishedSessions') || '[]';
     const storageFinishedSessions = storageFinishedSessionsValue ? JSON.parse(storageFinishedSessionsValue) : [];
 
-    console.log(storageFinishedSessions)
     sortAndSetFinishedSessions(storageFinishedSessions);
   }, []);
 
