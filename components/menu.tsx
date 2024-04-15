@@ -2,7 +2,7 @@
 import { Londrina_Solid } from "next/font/google";
 import Image from "next/image";
 import BurgerIcon from "./icons/burger-icon";
-import IconButton from "./IconButton";
+import { IconButton } from "./icon-button";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 

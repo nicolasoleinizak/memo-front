@@ -8,11 +8,7 @@ interface GameResultCardProps {
   score: number,
 }
 
-const scoreColors = [
-
-]
-
-export default function GameResultCard({ title, imageUrl, score }: GameResultCardProps) {
+export const GameResultCard = ({ title, imageUrl, score }: GameResultCardProps) => {
   return (
     <div
       className={`w-[150px] h-[150px] m-3 relative rounded-md outline outline-4 overflow-hidden hover:shadow-lg outline-primary-800`}

@@ -1,7 +1,7 @@
 'use client';
 
 import { useRouter } from "next/navigation";
-import GameCard from "../game-card";
+import { GameCard } from "../game-card";
 import { GameInput } from "@/interfaces/gameInput";
 
 interface GamesListContainerProps {

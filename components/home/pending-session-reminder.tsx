@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { Session as SessionType } from "@/interfaces/session";
-import IconButton from "../IconButton";
+import { IconButton } from "../icon-button";
 import { ArrowRightIcon } from "../icons/arrow-right-icon";
 import Image from "next/image";
 

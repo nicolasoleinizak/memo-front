@@ -2,7 +2,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Image as ImageType } from "@/interfaces/image";
 import Image from "next/image";
-import { useSpring, animated } from "@react-spring/web";
 import "./game-sheet.css";
 
 interface GameSheetProps {

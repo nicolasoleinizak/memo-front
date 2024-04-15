@@ -4,7 +4,7 @@ import { Game } from "@/components/game/game";
 import { useParams, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Session as SessionType } from '@/interfaces/session';
-import IconButton from "@/components/IconButton";
+import { IconButton } from "@/components/icon-button";
 import { ArrowRightIcon } from "@/components/icons/arrow-right-icon";
 import { useSpring,animated } from "@react-spring/web";
 

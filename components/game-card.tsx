@@ -9,7 +9,7 @@ interface GameCardProps {
   played?: boolean,
 }
 
-export default function GameCard({ title, imageUrl, onClick, played = false }: GameCardProps) {
+export const GameCard = ({ title, imageUrl, onClick, played = false }: GameCardProps) => {
   return (
     <div
       className="w-[240px] h-[240px] relative rounded-md outline outline-4 overflow-hidden hover:shadow-lg hover:cursor-pointer outline-secondary-800"

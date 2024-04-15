@@ -1,6 +1,6 @@
 "use client";
 
-import GameCardMini from "@/components/game-result-card";
+import { GameResultCard } from "@/components/game-result-card";
 import { useEffect, useState } from "react";
 
 export default function Stats() {
@@ -30,7 +30,7 @@ export default function Stats() {
         finishedSessions.length > 0 &&
         <div>
           <h3>Your last game</h3>
-            <GameCardMini
+            <GameResultCard
               title={finishedSessions[0]?.memoTest.name}
               imageUrl={finishedSessions[0]?.memoTest.images[0]?.url}
               score={finishedSessions[0]?.score}
@@ -45,7 +45,7 @@ export default function Stats() {
           <div className="flex flex-wrap my-2">
             {
               finishedSessions.slice(1).map((session, index) => (
-                <GameCardMini
+                <GameResultCard
                   key={index}
                   title={session?.memoTest.name}
                   imageUrl={session?.memoTest.images[0]?.url}

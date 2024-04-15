@@ -4,7 +4,7 @@ interface IconButtonProps {
     className?: string
 }
 
-export default function IconButton({children, onClick, className}: IconButtonProps) {
+export const IconButton = ({children, onClick, className}: IconButtonProps) => {
     return (
         <button
             className={`w-[42px] h-[42px] ${className} text-primary-50 p-[10px] rounded-full hover:bg-black-950/20`}
