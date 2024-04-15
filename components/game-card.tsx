@@ -12,7 +12,7 @@ interface GameCardProps {
 export const GameCard = ({ title, imageUrl, onClick, played = false }: GameCardProps) => {
   return (
     <div
-      className="w-[240px] h-[240px] relative rounded-md outline outline-4 overflow-hidden hover:shadow-lg hover:cursor-pointer outline-secondary-800"
+      className="w-[240px] h-[240px] relative rounded-md border border-[4px] overflow-hidden hover:shadow-lg hover:cursor-pointer border-secondary-800"
       onClick={onClick}
     >
       <div className="absolute z-10 top-0 left-0 bg-slate-50 text-center w-full bg-secondary-800">
