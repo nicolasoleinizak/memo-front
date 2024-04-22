@@ -11,11 +11,11 @@ const londrina = Londrina_Solid({
   weight: "400"
 });
 
-export default function Menu() {
+export default function Menu({className}: {className?: string}) {
   const router = useRouter();
 
   return (
-    <div className="grid grid-cols-3 justify-items-stretch items-center w-full bg-primary-950 px-5 h-20 text-primary-600 drop-shadow-lg">
+    <div className={`grid grid-cols-3 justify-items-stretch items-center w-full bg-primary-950 px-5 h-20 text-primary-600 drop-shadow-lg ${className}`}>
       <IconButton
         onClick={() => console.log("clicked")}
         className="justify-self-start text-primary-600"

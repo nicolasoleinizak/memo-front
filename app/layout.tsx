@@ -19,11 +19,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={andika.className}>
-        <Menu />
-        <div className="flex flex-column justify-center align-center w-full h-dvh p-6 bg-gradient-to-r from-secondary-200 to-secondary-100">
-          <div className="w-full p-4 overflow-auto">
+    <html lang="en" className="h-[100%] margin-0">
+      <body className={`${andika.className} h-[100%] margin-0`}>
+        <Menu className="fixed top-0 left-0 z-50"/>
+        <div className="flex flex-column justify-center align-center w-full h-[100%] p-6 pt-20 bg-gradient-to-r from-secondary-200 to-secondary-100">
+          <div className="w-full p-4">
             {children}
           </div>
         </div>
