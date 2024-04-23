@@ -1,7 +1,7 @@
 import { Game } from "@/components/game/game";
 import { GameStarter } from "@/components/game/game-starter";
-import { createSession } from "@/components/gameSession/createSession";
-import { fetchGame } from "@/components/gameSession/fetchGame";
+import { createSession } from "@/components/game/createSession";
+import { fetchGame } from "@/components/game/fetchGame";
 import { Image } from "@/interfaces/image";
 
 export default async function NewSession({ params }: any) {
