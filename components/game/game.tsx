@@ -7,13 +7,14 @@ import { Sheet } from '@/interfaces/sheet';
 
 interface GameProps {
   session: Session;
+  onFinish: (session: Session) => void;
 }
 
-export const Game = ({session: initialSession}: GameProps) => {
+export const Game = ({session: initialSession, onFinish}: GameProps) => {
   const [session, setSession] = useState(initialSession);
   const [twistedCount, setTwistedCount] = useState(0);
 
-  const audio = new Audio('/sounds/score.mp3');
+  const audio: any = new Audio('/sounds/score.mp3');
 
   useEffect(() => {
     const twisted = session.game.sheets.filter((sheet: Sheet) => sheet.display).length;
@@ -48,7 +49,7 @@ export const Game = ({session: initialSession}: GameProps) => {
         );
         setTimeout(() => {
           audio.play();
-        }, 1000);
+        }, 800);
       } else {
         setTimeout(() => {
           const updatedSession = session.game.sheets.map((sheet: Sheet) => {
@@ -76,7 +77,13 @@ export const Game = ({session: initialSession}: GameProps) => {
           , 1500)
       }
     }
-  }, [setSession, twistedCount, session, session.game.sheets, audio])
+  }, [setSession, twistedCount, session, session.game.sheets])
+
+  useEffect(() => {
+    if (session.game.sheets.every((sheet: Sheet) => sheet.checked)) {
+      onFinish(session);
+    }
+  }, [onFinish, session]);
 
   useEffect(() => {
     localStorage.setItem('memoTestSessions', JSON.stringify([session]));
