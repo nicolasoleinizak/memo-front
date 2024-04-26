@@ -1,16 +1,25 @@
 import { fetchServerGraphQL } from "@/lib/network/fetch-server-graphql"
 
 export const fetchGames = async () => {
-    return await fetchServerGraphQL(`
-        query {
-            memoTests {
-                id
-                name
-                images {
+    try {
+        return await fetchServerGraphQL(`
+            query {
+                memoTests {
                     id
-                    url
+                    name
+                    images {
+                        id
+                        url
+                    }
                 }
             }
+        `, {});
+    } catch (error) {
+        console.error(error);
+        return {
+            data: {
+                memoTests: []
+            }
         }
-    `, {});
+    }
 }

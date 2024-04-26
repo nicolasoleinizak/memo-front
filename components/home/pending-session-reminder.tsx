@@ -19,10 +19,10 @@ export const PendingSessionReminder = ({ className }: { className?: string }) =>
   return (
     <div className={` ${className}`}>
       {
-        session &&
+        session && session.game &&
         <div className="bg-primary rounded-lg p-3 text-primary-50 flex gap-4 items-center shadow">
           <div className="rounded-md overflow-hidden">
-            <Image src={session.game.sheets[0].image.url} width={60} height={60} alt="Alert icon" />
+            <Image src={session?.game?.sheets[0]?.image.url} width={60} height={60} alt="Alert icon" />
           </div>
           <div>
             <p>You have an ongoing game: {session?.game.name}</p>
