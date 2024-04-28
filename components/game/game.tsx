@@ -14,6 +14,7 @@ export const Game = ({session: initialSession, onFinish}: GameProps) => {
   const [session, setSession] = useState(initialSession);
   const [twistedCount, setTwistedCount] = useState(0);
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const audio: any = new Audio('/sounds/score.mp3');
 
   useEffect(() => {
@@ -77,7 +78,7 @@ export const Game = ({session: initialSession, onFinish}: GameProps) => {
           , 1500)
       }
     }
-  }, [setSession, twistedCount, session, session.game.sheets])
+  }, [setSession, twistedCount, session, session.game.sheets, audio])
 
   useEffect(() => {
     if (session.game.sheets.every((sheet: Sheet) => sheet.checked)) {
